@@ -23,7 +23,7 @@ end
 end
 tdcli.getUser(v.user_id_, clean_cb, nil)
  end 
-    tdcli.sendMessage(msg.to.id, msg.id, 1, '_All Deleted Account was cleared._', 1, 'md') 
+    tdcli.sendMessage(msg.to.id, msg.id, 1, '_تمام اکانت های حذف شده از گروه پاک شدند._', 1, 'md') 
   end 
   tdcli_function ({ID = "GetChannelMembers",channel_id_ = getChatId(msg.to.id).ID,offset_ = 0,limit_ = 1000}, check_deleted, nil)
   end 
