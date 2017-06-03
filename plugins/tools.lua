@@ -1166,11 +1166,11 @@ end
   if is_sudo(msg) then
 	if ((matches[1]:lower() == "sendfile" and not Clang) or (matches[1] == "ارسال فایل" and Clang)) and matches[2] and matches[3] then
 		local send_file = "./"..matches[2].."/"..matches[3]
-		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, send_file, , dl_cb, nil)
+		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, send_file, "", dl_cb, nil)
 	end
 	if ((matches[1]:lower() == "sendplug" and not Clang) or (matches[1] == "ارسال پلاگین" and Clang)) and matches[2] then
 	    local plug = "./plugins/"..matches[2]..".lua"
-		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, plug, , dl_cb, nil)
+		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, plug,"" , dl_cb, nil)
     end
   end
 
