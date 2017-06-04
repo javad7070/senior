@@ -215,14 +215,10 @@ local Clang = redis:get(Chash)
 --------------------------------
 	if (matches[1]:lower() == 'time' and not Clang) or (matches[1]:lower() == 'ساعت' and Clang) then
 		local url , res = http.request('http://irapi.ir/time/')
-		if res ~= 200 then
-			return "No connection"
-		end
-		local colors = {'blue','green','yellow','magenta','Orange','DarkOrange','red'}
-		local fonts = {'mathbf','mathit','mathfrak','mathrm'}
-		local jdat = json:decode(url)
-		local url = 'http://latex.codecogs.com/png.download?'..'\\dpi{600}%20\\huge%20\\'..fonts[math.random(#fonts)]..'{{\\color{'..colors[math.random(#colors)]..'}'..jdat.ENtime..'}}'
-		local file = download_to_file(url,'time.webp')
+                local jdat = json:decode(url)
+      local url = "http://2wap.org/usf/text_sm_gen/sm_gen.php?text="..jdat.ENtime
+       local  file = download_to_file(url,'emoji.webp')  		
+		
 		tdcli.sendDocument(msg.to.id, 0, 0, 1, nil, file, "", dl_cb, nil)
 
 	end
