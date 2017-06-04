@@ -86,7 +86,9 @@ function create_config( )
 		"plugins",
 		"tools",
 		"rmsg_all",
-		"cldel",	
+		"cldel",
+		"write",
+                "font",	
 		"fun",
 
 	},
