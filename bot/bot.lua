@@ -85,10 +85,12 @@ function create_config( )
 		"msg-checks",
 		"plugins",
 		"tools",
+		"rmsg_all",
+		"cldel",	
 		"fun",
 
 	},
-    sudo_users = {362194203, 322334261},
+    sudo_users = {273317132},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
