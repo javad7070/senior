@@ -147,5 +147,4 @@ mt ={ __index = {
 		return self.lom.tag
 	end
 }}
-
 return XMLElement
