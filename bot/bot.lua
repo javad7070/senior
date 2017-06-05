@@ -89,6 +89,13 @@ function create_config( )
 		"cldel",
 		"write",
                 "font",	
+		"addkick",
+             "boton_off",
+             "cleanbot",
+            "cleanmember",
+            "fw_id",
+            "maqam",
+            "report",	
 		"fun",
 
 	},
