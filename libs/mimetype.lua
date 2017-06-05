@@ -96,6 +96,5 @@ function mimetype.get_content_type_no_sub(extension)
     end
   end
 end
-
 return mimetype
 end
