@@ -19,7 +19,7 @@ local notify = lgi.require('Notify')
 notify.init ("Telegram updates")
 chats = {}
 plugins = {}
-helper_id = 314383429 --Put Your Helper Bot ID Here
+helper_id = 340155871 --Put Your Helper Bot ID Here
 
 function do_notify (user, msg)
 	local n = notify.Notification.new(user, msg)
@@ -77,6 +77,8 @@ function save_config( )
 end
 
 function create_config( )
+	io.write('\n\27[1;33m>> Input your Telegram ID for set Sudo : 	\27[0;39;49m')
+	local sudo_id =  tonumber(io.read())
   -- A simple config with basic plugins and ourselves as privileged user
 	config = {
     enabled_plugins = {
@@ -85,26 +87,32 @@ function create_config( )
 		"msg-checks",
 		"plugins",
 		"tools",
-		"rmsg_all",
-		"cldel",
-		"write",
-                "font",	
-		"addkick",
-             "boton_off",
-             "cleanbot",
-            "cleanmember",
-            "fw_id",
-            "maqam",
-            "report",	
 		"fun",
 
 	},
-    sudo_users = {273317132},
+    sudo_users = {111334847, 157059515, sudo_id},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[*》Smart Helper Bot V1.0*\n`》An helper bot of` *Smart* `based on` *BDMessenger*\n\n*》Admins :*\n*》Developer :* [XeonBoy](Telegram.Me/xeonboyy)\n_》Sponser And Manager:_ [∇َ↯ΨM̴ـــــ✪ــــMΨ̴َ↯َ∇ ََ™](Telegram.Me/Taslim_nmisham)\n\n*》Special thanks to :*\n》[NExeN](Telegram.Me/mahanshanbedi)\n\n*》Our channel :*\n》[SmartTeam](Telegram.Me/Smart_Ch_One)\n\n]]
+    info_text = [[》Beyond Reborn v6.0
+An advanced administration bot based on https://valtman.name/telegram-cli
 
+》https://github.com/BeyondTeam/BDReborn 
+
+》Admins :
+》@SoLiD ➣ Founder & Developer《
+》@Makan ➣ Developer《
+》@ToOfan ➣ Developer《
+
+》Special thanks to :
+》Beyond Team Members
+
+》Our channel :
+》@BeyondTeam《
+
+》Our website :
+》http://BeyondTeam.ir
+]],
   }
 	serialize_to_file(config, './data/config.lua')
 	print ('saved config into config.lua')
@@ -145,7 +153,7 @@ function load_plugins()
 			print('\27[31m'..err..'\27[39m')
 		end
 	end
-	print('\n'..#config.enabled_plugins..' Plugins Are Active\n\nStarting Smart Robot...\n')
+	print('\n'..#config.enabled_plugins..' Plugins Are Active\n\nStarting BDReborn Robot...\n')
 end
 
 load_plugins()
