@@ -319,7 +319,10 @@ _Get time in a sticker_
 ـShow only English words in 100 different fonts
 			
 *!font [text]*	
-ـShow only Persian words in 7 different fontsـ			
+ـShow only Persian words in 7 different fontsـ		
+			
+*!maqam*			
+_Show Rank different people in the group_			
 
 *!short* `[link]`
 _Make short url_
