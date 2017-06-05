@@ -1,5 +1,5 @@
 --Begin info.lua By @SoLiD
-local Solid = 322334261
+local Solid = 157059515
 local function setrank(msg, user_id, value,chat_id)
   local hash = nil
 
@@ -49,6 +49,7 @@ local function info_cb(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
+  text = text..'@BeyondTeam'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
 end
 tdcli_function ({
@@ -98,6 +99,7 @@ local function info_by_username(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
+  text = text..'@BeyondTeam'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    else
    tdcli.sendMessage(arg.chat_id, "", 0, "*User not found*", 0, "md")
@@ -105,8 +107,6 @@ local function info_by_username(arg, data)
 end
 
 local function info_by_id(arg, data)
-		local hash = 'rank:variables'
-		local value = redis:hget(hash, result.from.id)
       if tonumber(data.id_) then
     if data.username_ then
   username = "@"..check_markdown(data.username_)
@@ -135,11 +135,8 @@ local function info_by_id(arg, data)
 		       text = text..'_Rank :_ *Group Owner*\n\n'
 		     elseif is_mod1(arg.chat_id, data.id_) then
 		       text = text..'_Rank :_ *Group Moderator*\n\n'
-			else
+		 else
 		       text = text..'_Rank :_ *Group Member*\n\n'
-			end
-			else
-			text = text..'مقام : '..value..'\n\n'
 			end
          local user_info = {} 
   local uhash = 'user:'..data.id_
@@ -147,6 +144,7 @@ local function info_by_id(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
+  text = text..'@BeyondTeam'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    else
    tdcli.sendMessage(arg.chat_id, "", 0, "*User not found*", 0, "md")
@@ -158,25 +156,6 @@ local function setrank_by_reply(arg, data)
 end
 
 local function run(msg, matches)
-if matches[1]:lower() == 'setrank' then
-  local hash = 'usecommands:'..msg.from.id..':'..msg.to.id
-  redis:incr(hash)
-  if not is_sudo(msg) then
-    return "فقط باباییم میتونه از این دستور استفاده کنه!"
-  end
-  local receiver = get_receiver(msg)
-  local Reply = msg.reply_id
-  if msg.reply_id then
-  local value = string.sub(matches[2], 1, 1000)
-    msgr = get_message(msg.reply_id, action_by_reply2, {receiver=receiver, Reply=Reply, value=value})
-  else
-  local name = string.sub(matches[2], 1, 50)
-  local value = string.sub(matches[3], 1, 1000)
-  local text = setrank(msg, user_id, value,chat_id)
-  return text
-  end
-  end
-  
 local Chash = "cmd_lang:"..msg.to.id
 local Clang = redis:get(Chash)
 	if (matches[1]:lower() == 'info' and not Clang) or (matches[1]:lower() == 'اطلاعات فرد' and Clang) then 
@@ -238,6 +217,7 @@ local function info2_cb(arg, data)
   local um_hash = 'msgs:'..data.id_..':'..arg.chat_id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
   text = text..'Total messages : '..user_info_msgs..'\n\n'
+  text = text..'@BeyondTeam'
   tdcli.sendMessage(arg.chat_id, arg.msgid, 0, text, 0, "md")
    end
 end
@@ -252,8 +232,6 @@ return {
 	patterns = {
 "^[!/#](info)$",
 "^[!/#](info) (.*)$",
-"^[!/#](setrank) (.*)$",
-"^[!/#](setrank)$",
 "^(اطلاعات فرد)$",
 "^(اطلاعات فرد) (.*)$",
 
