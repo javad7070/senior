@@ -1,5 +1,5 @@
 --Begin Tools.lua :)
-local SUDO = 273317132 -- put Your ID here! <===
+local SUDO = 157059515 -- put Your ID here! <===
 function exi_files(cpath)
     local files = {}
     local pth = cpath
@@ -1082,7 +1082,7 @@ end
 
 if ((matches[1] == 'tosuper' and not Clang) or (matches[1] == "تبدیل به سوپرگروه" and Clang)) and is_admin(msg) then
 local text = matches[2]
-tdcli.createNewChannelChat(text, 1, '', (function(b, d) tdcli.addChatMember(d.id_, msg.from.id, 0, dl_cb, nil) end), nil)
+tdcli.createNewChannelChat(text, 1, '@BeyondTeam', (function(b, d) tdcli.addChatMember(d.id_, msg.from.id, 0, dl_cb, nil) end), nil)
    if not lang then 
 return '_SuperGroup Has Been Created and_ [`'..msg.from.id..'`] _Joined To This SuperGroup._'
   else
@@ -1166,11 +1166,11 @@ end
   if is_sudo(msg) then
 	if ((matches[1]:lower() == "sendfile" and not Clang) or (matches[1] == "ارسال فایل" and Clang)) and matches[2] and matches[3] then
 		local send_file = "./"..matches[2].."/"..matches[3]
-		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, send_file, "", dl_cb, nil)
+		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, send_file, msg_caption, dl_cb, nil)
 	end
 	if ((matches[1]:lower() == "sendplug" and not Clang) or (matches[1] == "ارسال پلاگین" and Clang)) and matches[2] then
 	    local plug = "./plugins/"..matches[2]..".lua"
-		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, plug,"" , dl_cb, nil)
+		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 1, nil, plug, msg_caption, dl_cb, nil)
     end
   end
 
@@ -1231,7 +1231,7 @@ return chat_list(msg)
 	   tdcli.sendMessage(matches[2], 0, 1, "Group has been removed by admin command", 1, 'html')
     return '_Group_ *'..matches[2]..'* _removed_'
 		end
-if ((matches[1] == 'smart' and not Clang) or (matches[1] == "اسمارت" and Clang)) then
+if ((matches[1] == 'beyond' and not Clang) or (matches[1] == "بیوند" and Clang)) then
 return tdcli.sendMessage(msg.to.id, msg.id, 1, _config.info_text, 1, 'html')
     end
 if ((matches[1] == 'adminlist' and not Clang) or (matches[1] == "لیست ادمین" and Clang)) and is_admin(msg) then
@@ -1265,32 +1265,11 @@ if matches[1] == "helptools" and not Clang and is_mod(msg) then
 if not lang then
 text = [[
 
-_Sudoer And Admins Senior Bot Help :_
+_Sudoer And Admins Beyond Bot Help :_
 
 *!visudo* `[username|id|reply]`
 _Add Sudo_
 
-*!addkick*			
-_Invite people excluded groups_			
-
-*!cm*			
-_Delete all members_			
-
-*!bot on*			
-_Turn bot_			
-
-*bot off*			
-_Turn off bot_			
-
-*!cleanbot*			
-_Remove all bots Group_			
-
-*!report [reply]			
-_Send a report to the Admin_			
-
-*!setmaster*			
-_Set admin for send Report_			
-			
 *!desudo* `[username|id|reply]`
 _Demote Sudo_
 
@@ -1393,37 +1372,16 @@ _You can use_ *[!/#]* _at the beginning of commands._
  
 *This means only the sudoers and its bot admins can use mentioned commands.*
 
-*Good luck ;)*]] 
+*Good luck ;)*]]..msg_caption
 tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 else
 
 text = [[
-_راهنمای ادمین و سودو های ربات سنیور:_
+_راهنمای ادمین و سودو های ربات بیوند:_
 
 *!visudo* `[username|id|reply]`
 _اضافه کردن سودو_
 
-*!addkick*			
-دعوت افراد حذف شده به گروه			
-
-*!cm*			
-حدف تمام اعضای گروه			
-
-*!bot on*			
-روشن کردن ربات			
-
-*!bot off*			
-خاموش کردن ربات			
-
-*!cleanbot*			
-حذف تمام ربات های گروه			
-
-*!report [reply]*			
-ارسال گزارش به مدیر گروه			
-			
-*!setmaster [number id]*			
-تنظیم مدیر گروه برای ارسال گزارش			
-			
 *!desudo* `[username|id|reply]`
 _حذف کردن سودو_
 
@@ -1526,7 +1484,7 @@ _این راهنما فقط برای سودو ها/ادمین های ربات م
 
 `این به این معناست که فقط سودو ها/ادمین های ربات میتوانند از دستورات بالا استفاده کنند!`
 
-*موفق باشید ;)*]] 
+*موفق باشید ;)*]]..msg_caption
 tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 end
 
@@ -1535,7 +1493,7 @@ if matches[1] == "راهنمای ابزار" and Clang and is_mod(msg) then
 if not lang then
 text = [[
 
-_Sudoer And Admins Senior Bot Help :_
+_Sudoer And Admins Beyond Bot Help :_
 
 *سودو* `[username|id|reply]`
 _Add Sudo_
@@ -1645,7 +1603,7 @@ tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 else
 
 text = [[
-_راهنمای ادمین و سودو های ربات سنیور:_
+_راهنمای ادمین و سودو های ربات بیوند:_
 
 *سودو* `[username|id|reply]`
 _اضافه کردن سودو_
@@ -1775,7 +1733,7 @@ patterns = {
 "^[!/#](admindem) (.*)$",
 "^[!/#](leave)$",
 "^[!/#](autoleave) (.*)$", 
-"^[!/#](smart)$",
+"^[!/#](beyond)$",
 "^[!/#](creategroup) (.*)$",
 "^[!/#](createsuper) (.*)$",
 "^[!/#](tosuper)$",
@@ -1845,7 +1803,7 @@ patterns = {
     "^(ارسال) +(.*) (-%d+)$",
 	"^(افزودن) (-%d+)$",
 	"^(پاک کردن حافظه)$",
-	"^(سنیور)$",
+	"^(بیوند)$",
 }, 
 run = run, pre_process = pre_process
 }
