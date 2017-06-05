@@ -314,6 +314,12 @@ _Senior Bot Fun Help Commands:_
 
 *!time*
 _Get time in a sticker_
+			
+*!write [text]*			
+ـShow only English words in 100 different fonts
+			
+*!font [text]*	
+ـShow only Persian words in 7 different fontsـ			
 
 *!short* `[link]`
 _Make short url_
@@ -358,6 +364,15 @@ _راهنمای فان ربات سنیور:_
 *!time*
 _دریافت ساعت به صورت استیکر_
 
+*!write [txt]*
+ نمایش فقط کلمات انگیسی به صد فونت مختلف
+			
+*!font [text]*			
+نمایش فقط کلمات فارسی به هفت فونت مختلف
+			
+*!maqam*			
+نمایش مقام های گوناگون افراد در گروه			
+			
 *!short* `[link]`
 _کوتاه کننده لینک_
 
