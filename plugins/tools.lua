@@ -1270,6 +1270,27 @@ _Sudoer And Admins Senior Bot Help :_
 *!visudo* `[username|id|reply]`
 _Add Sudo_
 
+*!addkick*			
+_Invite people excluded groups_			
+
+*!cm*			
+_Delete all members_			
+
+*!bot on*			
+_Turn bot_			
+
+*bot off*			
+_Turn off bot_			
+
+*!cleanbot*			
+_Remove all bots Group_			
+
+*!report [reply]			
+_Send a report to the Admin_			
+
+*!setmaster*			
+_Set admin for send Report_			
+			
 *!desudo* `[username|id|reply]`
 _Demote Sudo_
 
@@ -1382,6 +1403,27 @@ _راهنمای ادمین و سودو های ربات سنیور:_
 *!visudo* `[username|id|reply]`
 _اضافه کردن سودو_
 
+*!addkick*			
+دعوت افراد حذف شده به گروه			
+
+*!cm*			
+حدف تمام اعضای گروه			
+
+*!bot on*			
+روشن کردن ربات			
+
+*!bot off*			
+خاموش کردن ربات			
+
+*!cleanbot*			
+حذف تمام ربات های گروه			
+
+*!report [reply]*			
+ارسال گزارش به مدیر گروه			
+			
+*!setmaster [number id]*			
+تنظیم مدیر گروه برای ارسال گزارش			
+			
 *!desudo* `[username|id|reply]`
 _حذف کردن سودو_
 
