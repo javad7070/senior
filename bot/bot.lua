@@ -97,7 +97,9 @@ function create_config( )
              "cleanmember",
               "fw_id",
               "maqam",
-             "report",  	
+             "report",  
+		"me",
+               "rmsg",	
 		"fun",
 
 	},
