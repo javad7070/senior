@@ -230,7 +230,7 @@ local Clang = redis:get(Chash)
       return nil
       else
   local url = "http://tts.baidu.com/text2audio?lan=en&ie=UTF-8&text="..textc
-  local file = download_to_file(url,'BD-Reborn.mp3')
+  local file = download_to_file(url,'SN-Team.mp3')
  				tdcli.sendDocument(msg.to.id, 0, 0, 1, nil, file, "", dl_cb, nil)
    end
 end
