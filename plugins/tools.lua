@@ -1279,7 +1279,7 @@ _Delete all members_
 *!bot on*			
 _Turn bot_			
 
-*bot off*			
+*!bot off*			
 _Turn off bot_			
 
 *!cleanbot*			
