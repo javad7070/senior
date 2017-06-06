@@ -20,7 +20,7 @@ do local _ = {
     "report",  
     "fun"
   },
-  info_text = "*》Senior Bot V6.0*\n\n*》Admins :*\n*》Developer :* [javadmohammadi](Telegram.Me/cpp_cs)\n\n*》Our channel :*\n》[SeniortTeam](Telegram.Me/SeniorTm)\n\n",
+  info_text = "*》Senior Bot V6.0*\n\n*》Admins :*\n*》Developer :* [javadmohammadi](Telegram.Me/cpp_cs)\n\n*》Our channel :*\n》[SeniorTeam](Telegram.Me/SeniorTm)\n\n",
   moderation = {
     data = "./data/moderation.json"
   },
