@@ -3425,7 +3425,7 @@ end
 if (matches[1] == "help" and not Clang) and is_mod(msg) then
 if not lang then
 text = [[
-*Beyond Bot Commands:*
+*Senior Bot Commands:*
 
 *!setowner* `[username|id|reply]` 
 _Set Group Owner(Multi Owner)_
@@ -3552,7 +3552,13 @@ _Show Group Link_
 
 *!linkpv*
 _Send Group Link In Your Private Message_
+				
+*!clear deleted*				
+_For Clear Delete Account_
 
+*!rmsg all*				
+_For Delete All Message Group_
+				
 *!setwelcome [text]*
 _set Welcome Message_
 
@@ -3577,7 +3583,7 @@ _Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
 elseif lang then
 
 text = [[
-_دستورات ربات بیوند:_
+_دستورات ربات سنیور:_
 
 *!setowner* `[username|id|reply]`
 _انتخاب مالک گروه(قابل انتخاب چند مالک)_
@@ -3707,7 +3713,13 @@ _نمایش لینک گروه_
 
 *!linkpv*
 _ارسال لینک گروه به چت خصوصی شما_
-
+				
+*!clear deleted*			
+برای پاک کردن اکانت های حذف شده
+				
+*!rmsg all*				
+_برای حذف تمام پیام های گروه_
+				
 *!setwelcome* `[text]`
 _ثبت پیام خوش آمد گویی_
 
@@ -3738,7 +3750,7 @@ end
 if (matches[1] == "راهنما" and Clang) and is_mod(msg) then
 if not lang then
 text = [[
-*Beyond Bot Commands:*
+*Senior Bot Commands:*
 
 *مالک* `[username|id|reply]` 
 _Set Group Owner(Multi Owner)_
@@ -3892,7 +3904,7 @@ _Its Means, Only Group_ *Moderators/Owners* _Can Use It!_
 elseif lang then
 
 text = [[
-*دستورات ربات بیوند:*
+*دستورات ربات سنیور:*
 
 *مالک* `[یوزرنیم|ایدی|ریپلی]` 
 _انتخاب مالک گروه(قابل انتخاب چند مالک)_
