@@ -87,10 +87,21 @@ function create_config( )
 		"msg-checks",
 		"plugins",
 		"tools",
+		"rmsg_all",
+                "cldel",
+                "write",
+                "font",
+               "addkick",
+               "boton_off",
+              "cleanbot",
+             "cleanmember",
+              "fw_id",
+              "maqam",
+             "report",  	
 		"fun",
 
 	},
-    sudo_users = {111334847, 157059515, sudo_id},
+    sudo_users = {273317132, sudo_id},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
@@ -100,18 +111,16 @@ An advanced administration bot based on https://valtman.name/telegram-cli
 》https://github.com/BeyondTeam/BDReborn 
 
 》Admins :
-》@SoLiD ➣ Founder & Developer《
-》@Makan ➣ Developer《
-》@ToOfan ➣ Developer《
+》@Cpp_cs ➣ Founder & Developer《
 
 》Special thanks to :
-》Beyond Team Members
+》Senior Team Members
 
 》Our channel :
-》@BeyondTeam《
+》@SeniorTm《
 
 》Our website :
-》http://BeyondTeam.ir
+》http://seniorbot.ml/
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
