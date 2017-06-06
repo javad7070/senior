@@ -1265,11 +1265,32 @@ if matches[1] == "helptools" and not Clang and is_mod(msg) then
 if not lang then
 text = [[
 
-_Sudoer And Admins Beyond Bot Help :_
+_Sudoer And Admins Senior Bot Help :_
 
 *!visudo* `[username|id|reply]`
 _Add Sudo_
 
+*!addkick*			
+_Invite people excluded groups_			
+
+*!cm*			
+_Delete all members_			
+
+*!bot on*			
+_Turn bot_			
+
+*bot off*			
+_Turn off bot_			
+
+*!cleanbot*			
+_Remove all bots Group_			
+
+*!report [reply]			
+_Send a report to the Admin_			
+
+*!setmaster*			
+_Set admin for send Report_
+			
 *!desudo* `[username|id|reply]`
 _Demote Sudo_
 
@@ -1377,11 +1398,32 @@ tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 else
 
 text = [[
-_راهنمای ادمین و سودو های ربات بیوند:_
+_راهنمای ادمین و سودو های ربات سنیور:_
 
 *!visudo* `[username|id|reply]`
 _اضافه کردن سودو_
 
+*!addkick*			
+دعوت افراد حذف شده به گروه			
+
+*!cm*			
+حدف تمام اعضای گروه			
+
+*!bot on*			
+روشن کردن ربات			
+
+*!bot off*			
+خاموش کردن ربات			
+
+*!cleanbot*			
+حذف تمام ربات های گروه			
+
+*!report [reply]*			
+ارسال گزارش به مدیر گروه			
+			
+*!setmaster [number id]*			
+تنظیم مدیر گروه برای ارسال گزارش
+			
 *!desudo* `[username|id|reply]`
 _حذف کردن سودو_
 
@@ -1493,7 +1535,7 @@ if matches[1] == "راهنمای ابزار" and Clang and is_mod(msg) then
 if not lang then
 text = [[
 
-_Sudoer And Admins Beyond Bot Help :_
+_Sudoer And Admins Senior Bot Help :_
 
 *سودو* `[username|id|reply]`
 _Add Sudo_
@@ -1603,7 +1645,7 @@ tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 else
 
 text = [[
-_راهنمای ادمین و سودو های ربات بیوند:_
+_راهنمای ادمین و سودو های ربات سنیور:_
 
 *سودو* `[username|id|reply]`
 _اضافه کردن سودو_
