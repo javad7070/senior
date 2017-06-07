@@ -99,7 +99,8 @@ function create_config( )
               "maqam",
              "report",  
 		"me",
-               "rmsg",	
+               "rmsg",
+	       "cleanblist",	
 		"fun",
 
 	},
