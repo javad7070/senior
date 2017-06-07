@@ -19,7 +19,8 @@ do local _ = {
     "maqam",
     "report",  
     "me",
-    "rmsg",  
+    "rmsg", 
+    "cleanblist", 
     "fun"
   },
   info_text = "*》Senior Bot V6.0*\n\n*》Admins :*\n*》Developer :* [javadmohammadi](Telegram.Me/cpp_cs)\n\n*》Our channel :*\n》[SeniorTeam](Telegram.Me/SeniorTm)\n\n",
