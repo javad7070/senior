@@ -25,7 +25,7 @@ end
 
 return {
   patterns ={
-    "^([Cc][Ll][Ee][Aa][Nn]) ([Bb][Ll][Aa][Cc][Kk][Ll][Ii][Ss][Tt])$",
+    "^[!/#]([Cc][Ll][Ee][Aa][Nn]) ([Bb][Ll][Aa][Cc][Kk][Ll][Ii][Ss][Tt])$",
 	"^(پاک کردن) (بلک لیست)$",
   },
   run = run,
