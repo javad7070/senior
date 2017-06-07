@@ -100,7 +100,7 @@ function create_config( )
              "report",  
 		"me",
                "rmsg",
-	       "cleanblist",	
+	       "mutetime",	
 		"fun",
 
 	},
